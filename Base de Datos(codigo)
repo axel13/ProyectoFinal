@@ -1,0 +1,27 @@
+CREATE (cinco:Calificacion {puntaje:5})
+CREATE (cuatro:Calificacion {puntaje:4})
+CREATE (tres:Calificacion {puntaje:3})
+CREATE (dos:Calificacion {puntaje:2})
+CREATE (uno:Calificacion {puntaje:1})
+
+
+
+
+
+CREATE (MM2021:Curso {title:'Ecuaciones Diferenciales 1'})
+CREATE (ED2016:Clase {anio:2016})
+CREATE (ED201610:Seccion {sec:10})
+CREATE (luismijangos:Catedratico {nombre:'Luis Mijangos'})
+CREATE (Kevin67482:Estudiante {name:'Kevin Munoz', carrera:'Ingenieria Mecatronica' })
+CREATE (Jose75883:Estudiante {name:'Juan Jose', carrera:'Ingenieria Mecatronica' })
+CREATE (Juan99999:Estudiante {name:'Juan Andres', carrera:'Ingenieria Mecanica' })
+CREATE  (Kevin67482)-[:TOOK]->(ED201610)
+CREATE	(Jose75883)-[:TOOK]->(ED201610)
+CREATE	(Juan99999)-[:TOOK]->(ED201610)
+CREATE	(luismijangos)-[:TEACHED]->(ED201610)
+CREATE (Kevin67482)-[:QUALIFY]->(ED201610)
+CREATE (ED201610)-[:GOT]->(cinco)
+CREATE (Jose75883)-[:QUALIFY]->(ED201610)
+CREATE (Juan99999)-[:QUALIFY]->(ED201610)
+CREATE (ED2016)-[:SUBCLASS]->(MM2021)
+CREATE (ED201610)-[:SUBSECTION]->(ED2016)
