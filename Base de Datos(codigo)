@@ -22,6 +22,7 @@ CREATE (Juan99999)-[:QUALIFY]->(ED201610)
 CREATE (ED2016)-[:SUBCLASS]->(MM2021)
 CREATE (ED201610)-[:SUBSECTION]->(ED2016)
 
+
 CREATE (CC2003:Curso {title:'Estructura de Datos'})
 CREATE (EST2016:Clase {anio:2016})
 CREATE (EST201620:Seccion {sec:20})
@@ -40,7 +41,20 @@ CREATE (EST201620)-[:GOT]->(cuatro)
 CREATE (EST2016)-[:SUBCLASS]->(CC2003)
 CREATE (EST201620)-[:SUBSECTION]->(EST2016
 
-//Julio
+CREATE (IC2001:Curso {title:'Mecanica Estatica'})
+CREATE (ME2016:Clase {anio:2016})
+CREATE (ME201620:Seccion {sec:20})
+CREATE (luiscoto:Catedratico {nombre:'Luis Coto'})
+CREATE (Axel26455:Estudiante {name:'Axel Rodriguez', carrera:'Ingenieria Civil' })
+CREATE (Julio99765:Estudiante {name:'Julio Merida', carrera:'Ingenieria Civil' })
+CREATE  (Axel26455)-[:TOOK ]->(ME201620)
+CREATE (Julio99765)-[:TOOK ]->(ME201620)
+CREATE	(luiscoto)-[:TEACHED]->(ME201620)
+CREATE (Axel26455)-[:QUALIFY]->(ME201620)
+CREATE (ME201620)-[:GOT]->(dos)
+CREATE (Julio99765)-[:QUALIFY]->(ME201620)
+CREATE (ME2016)-[:SUBCLASS]->(IC2001)
+CREATE (ME201620)-[:SUBSECTION]->(ME2016)
 
 //Ro
 
