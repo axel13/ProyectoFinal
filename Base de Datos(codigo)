@@ -22,7 +22,23 @@ CREATE (Juan99999)-[:QUALIFY]->(ED201610)
 CREATE (ED2016)-[:SUBCLASS]->(MM2021)
 CREATE (ED201610)-[:SUBSECTION]->(ED2016)
 
-//Gus
+CREATE (CC2003:Curso {title:'Estructura de Datos'})
+CREATE (EST2016:Clase {anio:2016})
+CREATE (EST201620:Seccion {sec:20})
+CREATE (oscarivan:Catedratico {nombre:'Oscar Ivan'})
+CREATE (Gabriel86774:Estudiante {name:'Jose Gabriel', carrera:'Ingenieria Mecanica' })
+CREATE (Rodrigo93766:Estudiante {name:'Rodrigo Villatoro', carrera:'Ingenieria Electronica' })
+CREATE (Gustavo99337:Estudiante {name:'Gustavo Lacs', carrera:'Ingenieria Electronica' })
+CREATE  (Gabriel86774)-[:TOOK ]->(EST201620)
+CREATE  (Rodrigo93766)-[:TOOK ]->(EST201620)
+CREATE  (Gustavo99337)-[:TOOK ]->(EST201620)
+CREATE	(oscarivan)-[:TEACHED]->(EST201620)
+CREATE (Gabriel86774)-[:QUALIFY]->(EST201620)
+CREATE (Rodrigo93766)-[:QUALIFY]->(EST201620)
+CREATE (Gustavo99337)-[:QUALIFY]->(EST201620)
+CREATE (EST201620)-[:GOT]->(cuatro)
+CREATE (EST2016)-[:SUBCLASS]->(CC2003)
+CREATE (EST201620)-[:SUBSECTION]->(EST2016
 
 //Julio
 
