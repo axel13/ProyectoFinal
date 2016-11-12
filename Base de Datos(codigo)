@@ -4,10 +4,6 @@ CREATE (tres:Calificacion {puntaje:3})
 CREATE (dos:Calificacion {puntaje:2})
 CREATE (uno:Calificacion {puntaje:1})
 
-
-
-
-
 CREATE (MM2021:Curso {title:'Ecuaciones Diferenciales 1'})
 CREATE (ED2016:Clase {anio:2016})
 CREATE (ED201610:Seccion {sec:10})
@@ -25,3 +21,21 @@ CREATE (Jose75883)-[:QUALIFY]->(ED201610)
 CREATE (Juan99999)-[:QUALIFY]->(ED201610)
 CREATE (ED2016)-[:SUBCLASS]->(MM2021)
 CREATE (ED201610)-[:SUBSECTION]->(ED2016)
+
+//Gus
+
+//Julio
+
+//Ro
+
+CREATE (MM2018:Curso {title:'Calculo 3'})
+CREATE (C32016:Clase {anio:2016})
+CREATE (C3201630:Seccion {sec:30})
+CREATE (zaidarita:Catedratico {nombre:'Zaida Rita'})
+CREATE (Andres22113:Estudiante {name:'Jose Andres', carrera:'Ingenieria Industrial '})
+CREATE  (Andres22113)-[:TOOK]->(C3201630)
+CREATE	(zaidarita)-[:TEACHED]->(C3201630)
+CREATE (Andres22113)-[:QUALIFY]->(C3201630)
+CREATE (C3201630)-[:GOT]->(cuatro)
+CREATE (C32016)-[:SUBCLASS]->(MM2018)
+CREATE (C3201630)-[:SUBSECTION]->(C32016)
